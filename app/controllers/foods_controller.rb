@@ -40,6 +40,6 @@ class FoodsController < ApplicationController
 
   def set_food
     @food = current_user.foods.find(params[:id])
-    redirect_to root_path, alert: "権限がありません"
+    redirect_to root_path, alert: "権限がありません" if @food.nil?
   end
 end
