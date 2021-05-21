@@ -4,7 +4,7 @@
     <%= f.text_field :name, required: true %>
   </p>
   <p>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, accept: "image/png,image/jpeg,image/gif" %>
   </p>
   <p>
     <%= f.label :comment %>
