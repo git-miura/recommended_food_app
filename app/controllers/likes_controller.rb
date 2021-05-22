@@ -6,8 +6,8 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    current_user.likes.find_by(post_id: params[:food_id]).destroy!
-    edirect_back(fallback_location: root_path)
+    current_user.likes.find_by(food_id: params[:food_id]).destroy!
+    redirect_back(fallback_location: root_path)
   end
 
 end
