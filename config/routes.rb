@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root "foods#index"
   resources :foods
+    resource :likes, only: [:create, :destroy]
 end
