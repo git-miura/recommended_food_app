@@ -7,5 +7,9 @@ class Food < ApplicationRecord
 
   validates :name, presence: true
 
+  def liked_by?(user)
+    likes.exists?(user_id: user.id)
+  end
+
   mount_uploader :image, ImageUploader
 end
